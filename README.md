@@ -36,7 +36,7 @@ A high-performance, low-RAM command-line tool designed to process and aggregate 
 ### Running Locally
 Execute the core system via Python's module runner. Use the PYTHONUTF8=1 flag to ensure safe character encoding across different operating systems (especially Windows terminal).
 
-    python -m src.cli --input data/ad_data.csv --output data/output_results
+    python -m src.cli --input data/ad_data.csv --output results
 
 ### Running Unit Tests
 To run the automated test suite and verify the correctness of the aggregator logic and edge-case handling:
