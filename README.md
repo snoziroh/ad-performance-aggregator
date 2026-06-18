@@ -65,7 +65,7 @@ To run the automated test suite and verify the correctness of the aggregator log
 
 ## 5. Peak Memory Usage
 
-- Peak RAM Utilization: 378.54 MB
+- Peak RAM Utilization: 354.59 MB
 - Note: This proves our Out-of-Core Streaming engine works perfectly. When scaling the dataset from 1GB to 10GB (a 1000% data volume increase), the memory footprint remained strictly bounded, growing by a mere 4% (~15MB).
 
 ---
@@ -73,9 +73,9 @@ To run the automated test suite and verify the correctness of the aggregator log
 ## 6. Benchmark Logs
 Below is the execution log captured during the 1GB dataset profiling session:
 
-    Command>> python -m src.cli --input data/ad_data_10gb.csv --output data/output_results
+    Command>> python -m src.cli --input data/ad_data.csv --output results
     [*] Starting Ad Data Aggregator Performance Suite...
-    [*] Target File: data\ad_data_10gb.csv (Size: 9.72 GB)
+    [*] Target File: data\ad_data.csv (Size: 0.97 GB)
     [*] Initiating Polars LazyFrame Query Optimization Plan...
     [*] Executing Out-of-Core Multi-Threaded Streaming Pipeline...
     [*] Post-Processing: Filtering Null CPAs and calculating Top-K heaps...
@@ -84,7 +84,7 @@ Below is the execution log captured during the 1GB dataset profiling session:
     ======================== BENCHMARK METRICS ========================
     [METRIC] Total Unique Campaigns Processed : 50 campaigns
     [METRIC] Processing Engine       : Polars (Rust Engine with Streaming Mode)
-    [METRIC] Execution Duration      : 5.6756 seconds
-    [METRIC] Peak Memory (RAM) Usage : 378.54 MB
+    [METRIC] Execution Duration      : 0.5177 seconds
+    [METRIC] Peak Memory (RAM) Usage : 354.59 MB
     ===================================================================
-    [+] Success! Results exported to: data\output_results
+    [+] Success! Results exported to: results
